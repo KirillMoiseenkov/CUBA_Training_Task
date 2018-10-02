@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.cubatrainingtask.web.carservicecenter.CarServiceCenterEdit"
+        datasource="carServiceCenterDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.cubatrainingtask.web.carservicecenter">
+    <dsContext>
+        <datasource id="carServiceCenterDs"
+                    class="com.company.cubatrainingtask.entity.CarServiceCenter"
+                    view="carServiceCenter-with-employers">
+            <collectionDatasource id="employersDs"
+                                  property="employers"/>
+            <collectionDatasource id="cityDs"
+                                  property="city"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="carServiceCenterDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="phone"/>
+                <field property="adress"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="employersBox"
+                  caption="msg://com.company.cubatrainingtask.entity/CarServiceCenter.employers">
+            <table id="employersTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="firstName"/>
+                </columns>
+                <rows datasource="employersDs"/>
+                <buttonsPanel>
+                    <button action="employersTable.create"/>
+                    <button action="employersTable.edit"/>
+                    <button action="employersTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <groupBox id="cityBox"
+                  caption="msg://com.company.cubatrainingtask.entity/CarServiceCenter.city">
+            <table id="cityTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="add"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="name"/>
+                </columns>
+                <rows datasource="cityDs"/>
+                <buttonsPanel>
+                    <button action="cityTable.add"/>
+                    <button action="cityTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

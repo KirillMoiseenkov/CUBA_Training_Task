@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="com/company/cubatrainingtask/screens.xml"/>
+    <screen id="cubatrainingtask$City.browse"
+            template="com/company/cubatrainingtask/web/city/city-browse.xml"/>
+    <screen id="cubatrainingtask$City.edit"
+            template="com/company/cubatrainingtask/web/city/city-edit.xml"/>
+    <screen id="cubatrainingtask$Customer.browse"
+            template="com/company/cubatrainingtask/web/customer/customer-browse.xml"/>
+    <screen id="cubatrainingtask$Individual.browse"
+            template="com/company/cubatrainingtask/web/individual/individual-browse.xml"/>
+    <screen id="cubatrainingtask$Company.browse"
+            template="com/company/cubatrainingtask/web/company/company-browse.xml"/>
+    <screen id="cubatrainingtask$Company.edit"
+            template="com/company/cubatrainingtask/web/company/company-edit.xml"/>
+    <screen id="cubatrainingtask$Employee.browse"
+            template="com/company/cubatrainingtask/web/employee/employee-browse.xml"/>
+    <screen id="cubatrainingtask$Employee.edit"
+            template="com/company/cubatrainingtask/web/employee/employee-edit.xml"/>
+    <screen id="cubatrainingtask$CarServiceCenter.browse"
+            template="com/company/cubatrainingtask/web/carservicecenter/car-service-center-browse.xml"/>
+    <screen id="cubatrainingtask$CarServiceCenter.edit"
+            template="com/company/cubatrainingtask/web/carservicecenter/car-service-center-edit.xml"/>
+</screen-config>
